@@ -8,6 +8,12 @@ namespace Boba.Configurations;
 /// </summary>
 public static class ServiceCollectionExtensions
 {
+    /// <summary>
+    /// Adds Boba configurations to the service collection.
+    /// </summary>
+    /// <param name="services">The <see cref="IServiceCollection"/> to add the configurations to.</param>
+    /// <param name="configuration">The <see cref="IConfigurationManager"/> containing the configuration data.</param>
+    /// <returns>The modified <see cref="IServiceCollection"/>.</returns>
     public static IServiceCollection AddBobaConfigurations(this IServiceCollection services, IConfigurationManager configuration)
     {
         var appDomain = new AppDomainTypeFinder();
